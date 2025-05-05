@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ url_for('static', filename='css/perfil.css') }}" rel="stylesheet" />
+    <title>Entrega+</title>
+  </head>
+    {% block body %}
+  <body class="overflow-hidden">
+
+    <div class="container">
+      <header>
+
+      </header>
+      <div class="container-popup">
+          {% block formulario %}
+        <form method="POST" class="popup">
+            {{ form.csrf_token }}
+          <h2>Bem-vindo(a) ao Entrega+</h2>
+
+          <div class="div-input">
+            {{ form.email.label(class="label") }}
+                {{ form.email(class="input") }}
+          </div>
+
+          <div class="div-input">
+            {{ form.senha.label(class="label") }}
+                {{ form.senha(class="input") }}
+          </div>
+
+          <div class="div-botao">
+            {{ form.botao_confirmacao(class="botao-login") }}
+            <a href="{{ url_for('criarconta') }}" class="link-criarconta">Não tem uma conta? Crie aqui</a>
+          </div>
+        </form>
+          {% endblock %}
+      </div>
+    </div>
+  </body>
+{% endblock %}
+</html>

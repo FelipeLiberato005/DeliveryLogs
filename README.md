@@ -41,8 +41,6 @@ Em um banco de dados com SQLAlchemy;
 
 Em um arquivo .txt para fins de auditoria;
 
-Em um arquivo .xlsx (Excel) para visualização e análise externa.
-
   Painel do Administrador
 Apenas usuários administradores podem acessar o painel onde:
 
@@ -65,7 +63,6 @@ scikit-learn (IA / machine learning)
 
 Pandas
 
-HTML + CSS (Bootstrap opcional)
+HTML
 
-Excel / .txt para exportação de logs
 
